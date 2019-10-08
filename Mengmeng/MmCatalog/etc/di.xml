@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Mengmeng\MmCatalog\Api\CategoryLinkManagementInterface" type="Mengmeng\MmCatalog\Model\CategoryLinkManagement" />
+    <preference for="Mengmeng\MmCatalog\Api\CategoryRepositoryInterface" type="Mengmeng\MmCatalog\Model\CategoryRepository" />
+    <preference for="Mengmeng\MmCatalog\Api\Data\CategoryProductLinkInterface" type="Mengmeng\MmCatalog\Model\CategoryProductLink" />
+</config>
