@@ -19,6 +19,7 @@ class CategoryProductLink extends \Magento\Framework\Api\AbstractExtensibleObjec
     const KEY_POSITION = 'position';
     const KEY_CATEGORY_ID = 'category_id';
     const KEY_NAME ='name';
+    const KEY_FINALPRICE = 'final_price';
     const KEY_PRICE = 'price';
     const KEY_IMAGE = 'image';
     /**#@-*/
@@ -39,6 +40,20 @@ class CategoryProductLink extends \Magento\Framework\Api\AbstractExtensibleObjec
         return $this->setData(self::KEY_IMAGE,$image);
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function getFinalPrice(){
+        return $this->_get(self::KEY_FINALPRICE);
+    }
+    /**
+     * @param string $price
+     * @return $this
+     */
+    public function setFinalPrice($finalPrice)
+    {
+        return $this->setData(self::KEY_FINALPRICE,$finalPrice);
+    }
     /**
      * {@inheritdoc}
      */

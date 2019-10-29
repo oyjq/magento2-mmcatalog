@@ -64,7 +64,7 @@ class CategoryLinkManagement implements \Mengmeng\MmCatalog\Api\CategoryLinkMana
 
         /** @var \Mengmeng\MmCatalog\Model\ResourceModel\Product\Collection $products */
         $products = $category->getProductCollection();
-        $products->addFieldToSelect(['price','image','name','position']);
+        $products->addFieldToSelect(['image','name','position','final_price','price']);
 
         /** @var \Mengmeng\MmCatalog\Api\Data\CategoryProductLinkInterface[] $links */
         $links = [];
@@ -75,6 +75,7 @@ class CategoryLinkManagement implements \Mengmeng\MmCatalog\Api\CategoryLinkMana
             $link = $this->productLinkFactory->create();
             $link->setSku($product->getSku())
                 ->setPrice($product->getPrice())
+                ->setFinalPrice($product->getFinalPrice())
                 ->setPosition($product->getData('cat_index_position'))
                 ->setName($product->getData('name'))
                 ->setImage($product->getImage())
